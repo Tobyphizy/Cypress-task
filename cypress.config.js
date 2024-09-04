@@ -1,9 +1,11 @@
-const { defineConfig } = require("cypress");
-
 module.exports = defineConfig({
   e2e: {
-    chromeWebSecurity:false,
-   setupNodeEvents(on, config) {
-    },
-  },
+    baseUrl: "https://www.saucedemo.com/",
+    chromeWebSecurity: false,
+    defaultCommandTimeout: 10000,
+    screenshotOnRunFailure:false,
+    setupNodeEvents(on,config) {
+      // You can add custom setup code here if needed
+    },
+  },
 });
